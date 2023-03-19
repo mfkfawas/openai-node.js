@@ -16,6 +16,8 @@ const userInterface = new readline.createInterface({
 });
 
 userInterface.prompt();
+
+//This event is fired when the user presses enter
 userInterface.on("line", async input => {
   const res = await openai.createChatCompletion({
     model: "gpt-3.5-turbo",
